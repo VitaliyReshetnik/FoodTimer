@@ -1,0 +1,75 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url(photo/background.jpg);
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Змінено на stretch, щоб розтягнути дочірні елементи до максимальної висоти */
+    min-height: 100vh; /* Мінімальна висота вікна перегляду */
+    padding: 20px; /* Відступ для забезпечення простору навколо контенту */
+     
+    
+}
+
+.content, .menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1; /* Забезпечує, що контент займає більшу частину простору */
+    max-width: 60%; /* Максимальна ширина контенту */
+    background-image: linear-gradient(to right, #845EC2, #A178DF, #BE93FD, #DCB0FF, #FACCFF);
+    
+    padding: 20px; /* Відступ всередині контенту */
+    border-radius: 15px; /* Заокруглення кутів */
+}
+
+
+.menu {
+    width: 200px; /* Фіксована ширина для меню */
+    background-image: linear-gradient(to right, #FACCFF, #DCB0FF, #BE93FD, #A178DF, #845EC2);
+    padding: 20px; /* Відступ всередині меню */
+    margin-left: 20px; /* Відступ між контентом і меню */
+    border-radius: 15px; /* Заокруглення кутів */
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column; /* Стовпчикове розташування на мобільних пристроях */
+    }
+
+    .content, .menu {
+        max-width: 100%;
+        margin-left: 0; /* Видаляємо відступ між контентом і меню на мобільних */
+    }
+}
+.menu ul {
+    list-style-type: none; /* Видалення стандартних маркерів списку */
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin-bottom: 10px; /* Відступ між елементами меню */
+}
+
+.menu a {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 3px;
+    text-decoration: none; /* Видалення підкреслення тексту */
+    color: white; /* Колір тексту */
+    background-color: #D5CABD; /* Фоновий колір кнопок */
+    border-radius: 5px; /* Заокруглення кутів кнопок */
+    text-align: center;
+    transition: background-color 0.3s; /* Анімація для фону */
+}
+
+.menu a:hover {
+    background-color: #5A5F9F; /* Зміна фону при наведенні */
+}
